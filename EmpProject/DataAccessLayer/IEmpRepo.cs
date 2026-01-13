@@ -10,7 +10,7 @@ namespace EmpProject.DAL
     {
         List<Emp> Get();
         Emp Get(int id);
-        bool Add(Emp emp);
+        bool Create(Emp emp);
         bool Update(Emp emp);
         bool Delete(int id);
     }

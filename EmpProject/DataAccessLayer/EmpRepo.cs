@@ -16,16 +16,19 @@ namespace EmpProject.DAL
             new Emp(4, "Kawser", "Faridpur, Bangladesh")
 
         };
+
         public List<Emp> Get()
         {
-            return EmpList.OrderBy(x => x.Name).ToList();
+            return EmpList;
         }
+
         public Emp Get(int id)
         {
             Emp oEmp = EmpList.Where(x => x.ID == id).FirstOrDefault();
             return oEmp;
         }
-        public bool Add(Emp emp)
+
+        public bool Create(Emp emp)
         {
             EmpList.Add(emp);
             return true;

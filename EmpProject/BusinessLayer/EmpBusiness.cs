@@ -16,22 +16,28 @@ namespace EmpProject.BL
         {
             _repository = repo;
         }
+
         public List<Emp> Get()
         {
-            return _repository.Get();
+            List<Emp> response = _repository.Get();
+            return response.OrderBy(x => x.ID).ToList();
         }
+
         public Emp Get(int id)
         {
             return _repository.Get(id);
         }
-        public bool Add(Emp emp)
+
+        public bool Create(Emp emp)
         {
-            return _repository.Add(emp);
+            return _repository.Create(emp);
         }
+
         public bool Update(Emp emp)
         {
             return _repository.Update(emp);
         }
+
         public bool Delete(int id)
         {
             return _repository.Delete(id);

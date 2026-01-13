@@ -49,7 +49,7 @@ namespace EmpProject
                         aEmp.ID = Convert.ToInt32(id);
                         aEmp.Name = name;
                         aEmp.Address = address;
-                        bool isExecuted = empBusiness.Add(aEmp);
+                        bool isExecuted = empBusiness.Create(aEmp);
                         if (isExecuted)
                         {
                             Console.WriteLine("Added successfully.");
@@ -99,7 +99,7 @@ namespace EmpProject
                     {
                         Console.Clear();
                     }
-                    else if (command == "X")
+                    else if (command == "E")
                     {
                         isRunning = false;
                     }
